@@ -1,8 +1,10 @@
 import React, {useState} from 'react';
 import List from "../List";
+import Badge from "../Badge";
+
+import closeSvg from "../../assetes/img/close.svg"
 
 import './AddListButtom.scss'
-import Badge from "../Badge";
 
 const AddList = ({colors}) => {
     const [visiblePopup, setVisiblePopup] = useState(false);
@@ -26,6 +28,7 @@ const AddList = ({colors}) => {
             ]}/>
             {visiblePopup &&
             <div className="add-list__popup">
+                <img onClick={() => setVisiblePopup(false)} src={closeSvg} alt="close-svg" className="add-list__popup-close-btn"/>
                 <input className="field" type="text" placeholder="Название папки"/>
                 <div className="add-list__popup-colors">
                     {colors.map(color => (
