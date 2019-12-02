@@ -1,5 +1,5 @@
 {
-  "list": [
+  "lists": [
     {"id": 1, "name": "Покупки","colorId": 5 },
     {"id": 2, "name": "Фронтенд","colorId": 4 },
     {"id": 3, "name": "Фильмы и сериалы","colorId": 3 },

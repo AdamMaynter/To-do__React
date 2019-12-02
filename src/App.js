@@ -22,22 +22,10 @@ function App() {
                 ]}
 
                 />
-                <List items={[
-                    {
-                        color: 'green',
-                        name: 'Покупки'
-                    },
-                    {
-                        color: 'blue',
-                        name: 'Фронтенд'
-                    },
-                    {
-                        color: 'pink',
-                        name: 'Фильмы и сериалы'
-                    }
-                ]}
-                       isRemovable
-                />
+                <List items={DB.lists.map(item => {
+                    item.color = DB.colors.filter(color => color.id === item.colorId)[0].name;
+                    return item
+                })} isRemovable/>
                 <AddList colors={DB.colors}/>
             </div>
             <div className="todo__tasks">
