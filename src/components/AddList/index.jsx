@@ -6,7 +6,7 @@ import Badge from "../Badge";
 
 const AddList = ({colors}) => {
     const [visiblePopup, setVisiblePopup] = useState(false);
-    const [selectColor, setSelectColor] = useState(null);
+    const [selectColor, setSelectColor] = useState(colors[0].id);
     return (
         <div className="add-list">
             <List onClick={() => setVisiblePopup(true)} items={[
